@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Alyssa</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+<!-- ENTRY PAGE -->
+<section id="entry" class="entry">
+  <div class="entry-box">
+    <h1>HAPPY BIRTHDAY ALYSSA</h1>
+    <p>enter your name to unlock your page</p>
+
+    <input id="nameInput" type="text" placeholder="Alyssa" />
+    <button id="enterBtn">Enter</button>
+
+    <p class="tiny">Press Enter on your keyboard too</p>
+  </div>
+</section>
+
+<!-- MAIN SITE -->
+<div id="site" class="hidden">
+
+  <header class="topbar">
+    <div class="brand">
+      <div class="mark"></div>
+      <div>
+        <div class="title">happy birthday alyssa</div>
+        <div class="subtitle">a tiny snoopy-ish birthday site</div>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <button class="tab active" data-page="home">Home</button>
+      <button class="tab" data-page="card">Card</button>
+    </nav>
+  </header>
+
+  <main class="wrap">
+
+    <!-- HOME -->
+    <section id="home" class="page show">
+      <div class="grid">
+        <div class="panel panel-blue">
+          <h2>you’re 15!!</h2>
+          <p>click anywhere… (it does a cute thing)</p>
+
+          <!-- Upload your own Snoopy gif later and name it snoopy.gif -->
+          <img src="snoopy.gif" alt="snoopy gif" class="home-gif" />
+
+          <p class="micro">if the gif doesn’t show yet, that’s okay — it’ll appear once you upload it.</p>
+        </div>
+
+        <div class="panel panel-ice">
+          <div class="photo-frame">
+            <!-- Upload Alyssa's photo later and name it alyssa.jpg -->
+            <img src="alyssa.jpg" alt="Alyssa" />
+          </div>
+          <div class="caption">
+            <span class="caption-title">Alyssa</span>
+            <span class="caption-sub">15 today</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CARD -->
+    <section id="card" class="page">
+      <div class="panel panel-ice single">
+        <h2>Card</h2>
+
+        <div class="card-preview">
+          <div class="card-top">
+            <div class="stamp"></div>
+            <div>
+              <div class="card-to">To: Alyssa</div>
+              <div class="card-from">From: you :)</div>
+            </div>
+          </div>
+
+          <div class="card-body">
+Happy birthday Alyssa! You are so young wth but still halfway to 30 (stole a leaf out of Natalie’s book there) anyways I wish 15 treats you well and I know you will accomplish everything you want! You are actually so incredibly smart and amazing and fun to be around, and you’re also so talented at multiple things and debating I feel like you should ackowncegde that wayyy more often. Im super grateful to have u in the friendgroup especially when it comes to werewolf ha.ha. ha. ANYWAYS. I HOPE U HAVE AN AMAZING YEAR ILYSM AND BYE! (Also please try and refresh if this site is not bringing you to any other section apart from this because ive tried to recode this stupid branch multiple times and my coding WONT WORK BRUH. So if this crashes I am very very sory but I aint that advanced for all this sory :)
+          </div>
+
+          <div class="card-bottom">
+            <span class="signature">— you</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <span>this took me way too long</span>
+  </footer>
+</div>
+
+<!-- EFFECT LAYER -->
+<div id="fx"></div>
+
+<script>
+  const entry = document.getElementById("entry");
+  const site = document.getElementById("site");
+  const nameInput = document.getElementById("nameInput");
+  const enterBtn = document.getElementById("enterBtn");
+
+  let currentPage = "home";
+
+  function enterSite() {
+    if (!nameInput.value.trim()) return;
+    entry.classList.add("hidden");
+    site.classList.remove("hidden");
+    currentPage = "home";
+  }
+
+  enterBtn.onclick = enterSite;
+  nameInput.onkeydown = e => { if (e.key === "Enter") enterSite(); };
+
+  const tabs = document.querySelectorAll(".tab");
+  const pages = document.querySelectorAll(".page");
+
+  tabs.forEach(tab => {
+    tab.onclick = () => {
+      tabs.forEach(t => t.classList.remove("active"));
+      pages.forEach(p => p.classList.remove("show"));
+      tab.classList.add("active");
+      document.getElementById(tab.dataset.page).classList.add("show");
+      currentPage = tab.dataset.page;
+    };
+  });
+
+  // Snoopy-ish click sprites: paw + sparkles + cloud
+  document.addEventListener("click", e => {
+    if (["BUTTON","INPUT","TEXTAREA"].includes(e.target.tagName)) return;
+
+    const symbols =
+      currentPage === "home"
+        ? ["🐾", "✦", "☁︎"]
+        : ["♡", "♥"];
+
+    const h = document.createElement("div");
+    h.className = "sprite";
+    h.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+
+    h.style.left = e.clientX + "px";
+    h.style.top = e.clientY + "px";
+    h.style.fontSize = (14 + Math.random() * 10) + "px";
+
+    // blue/ice palette
+    h.style.color = Math.random() < 0.5
+      ? "rgba(214,232,255,0.98)"
+      : "rgba(190,215,245,0.98)";
+
+    const r1 = (Math.random() * 90 - 45);
+    const r2 = r1 + (Math.random() * 120 - 60);
+
+    document.getElementById("fx").appendChild(h);
+    h.style.transform = `translate(-50%, -50%) rotate(${r1}deg)`;
+
+    requestAnimationFrame(() => {
+      h.style.opacity = "0";
+      h.style.transform = `translate(-50%, -50%) translateY(-120px) rotate(${r2}deg)`;
+    });
+
+    setTimeout(() => h.remove(), 1700);
+  });
+</script>
+
+</body>
+</html>
