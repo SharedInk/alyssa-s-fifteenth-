@@ -9,392 +9,169 @@
 
 <body>
 
-<!-- ENTRY PAGE -->
+<!-- ENTRY -->
 <section id="entry" class="entry">
   <div class="entry-box">
     <h1>HAPPY BIRTHDAY ALYSSA</h1>
     <p>type your name to enter</p>
-
-    <input id="nameInput" type="text" placeholder="Alyssa" autocomplete="off" />
-    <button id="enterBtn" type="button">Enter</button>
-
-    <p class="tiny">press Enter on your keyboard too</p>
-    <p id="errorMsg" class="error hidden">you have to type your name first</p>
+    <input id="nameInput" placeholder="Alyssa" />
+    <button id="enterBtn">Enter</button>
+    <p class="tiny">you actually have to type it</p>
   </div>
 </section>
 
-<!-- MAIN SITE -->
+<!-- SITE -->
 <div id="site" class="hidden">
 
-  <header class="topbar">
-    <div class="brand">
-      <div class="mark"></div>
-      <div>
-        <div class="title" id="titleText">happy birthday alyssa</div>
-        <div class="subtitle">a tiny snoopy-coded birthday site</div>
-      </div>
+<header class="topbar">
+  <div class="brand">
+    <div class="mark"></div>
+    <div>
+      <div class="title">happy birthday alyssa</div>
+      <div class="subtitle">a tiny snoopy-coded site</div>
     </div>
+  </div>
 
-    <nav class="nav">
-      <button class="tab active" type="button" data-page="home">Home</button>
-      <button class="tab" type="button" data-page="card">Card</button>
-      <button class="tab" type="button" data-page="game">Game</button>
-    </nav>
-  </header>
+  <nav class="nav">
+    <button class="tab active" data-page="home">Home</button>
+    <button class="tab" data-page="card">Card</button>
+    <button class="tab" data-page="game">Game</button>
+  </nav>
+</header>
 
-  <main class="wrap">
+<main class="wrap">
 
-    <!-- HOME -->
-    <section id="home" class="page show">
-      <div class="grid">
-        <div class="panel panel-blue">
-          <h2 id="homeHeading">you’re 15!!</h2>
-          <p>click anywhere (i made it do a cute thing)</p>
+<!-- HOME -->
+<section id="home" class="page show">
+  <div class="panel single">
+    <h2>you’re 15!!</h2>
+    <p>click anywhere — it does something cute</p>
 
-          <!-- Optional snoopy gif: upload a file named snoopy.gif -->
-          <img src="snoopy.gif" alt="snoopy gif" class="home-gif" />
-          <p class="micro">if the gif isn't uploaded yet, it'll just be blank here.</p>
-        </div>
+    <!-- Optional Snoopy gif -->
+    <img src="snoopy.gif" class="home-gif" alt="snoopy" />
 
-        <div class="panel panel-ice">
-          <div class="photo-frame">
-            <!-- Upload Alyssa photo as alyssa.jpg -->
-            <img src="alyssa.jpg" alt="Alyssa" />
-          </div>
-          <div class="caption">
-            <span class="caption-title" id="captionName">Alyssa</span>
-            <span class="caption-sub">15 today</span>
-          </div>
-        </div>
-      </div>
-    </section>
+    <p class="tiny">(gif appears once you upload it)</p>
+  </div>
+</section>
 
-    <!-- CARD -->
-    <section id="card" class="page">
-      <div class="panel panel-ice single">
-        <h2>Card</h2>
+<!-- CARD -->
+<section id="card" class="page">
+  <div class="panel single">
+    <h2>Card</h2>
 
-        <div class="card-preview">
-          <div class="card-top">
-            <div class="stamp"></div>
-            <div>
-              <div class="card-to" id="cardToLine">To: Alyssa</div>
-              <div class="card-from">From: you :)</div>
-            </div>
-          </div>
+    <div class="card-preview">
+      <p>
+Happy birthday Alyssa! You are so young wth but still halfway to 30 (stole a leaf out of Natalie’s book there) anyways I wish 15 treats you well and I know you will accomplish everything you want!
 
-          <div class="card-body">
-Happy birthday Alyssa! You are so young wth but still halfway to 30 (stole a leaf out of Natalie’s book there) anyways I wish 15 treats you well and I know you will accomplish everything you want! You are actually so incredibly smart and amazing and fun to be around, and you’re also so talented at multiple things and debating I feel like you should ackowncegde that wayyy more often. Im super grateful to have u in the friendgroup especially when it comes to werewolf ha.ha. ha. ANYWAYS. I HOPE U HAVE AN AMAZING YEAR ILYSM AND BYE! (Also please try and refresh if this site is not bringing you to any other section apart from this because ive tried to recode this stupid branch multiple times and my coding WONT WORK BRUH. So if this crashes I am very very sory but I aint that advanced for all this sory :)
-          </div>
+You are actually so incredibly smart and amazing and fun to be around, and you’re also so talented at multiple things and debating — I feel like you should acknowledge that wayyy more often.
 
-          <div class="card-bottom">
-            <span class="signature">— you</span>
-          </div>
-        </div>
-      </div>
-    </section>
+Im super grateful to have u in the friendgroup especially when it comes to werewolf ha.ha. ha.
 
-    <!-- GAME -->
-    <section id="game" class="page">
-      <div class="panel panel-blue single">
-        <h2>Mini Game</h2>
-        <p class="subtle">Press Start, then click/tap anywhere to jump.</p>
+ANYWAYS. I HOPE U HAVE AN AMAZING YEAR ILYSM AND BYE!
 
-        <canvas id="gameCanvas" width="900" height="260" class="game-canvas"></canvas>
+(Also please try and refresh if this site is not bringing you to any other section apart from this because ive tried to recode this stupid branch multiple times and my coding WONT WORK BRUH. So if this crashes I am very very sory but I aint that advanced for all this sory :)
+      </p>
 
-        <div class="game-row">
-          <button id="gameStart" class="tab active" type="button">Start</button>
-          <button id="gameReset" class="tab" type="button">Reset</button>
+      <p class="sig">— you 💙</p>
+    </div>
+  </div>
+</section>
 
-          <div class="game-score">
-            <span>Score: <b id="scoreText">0</b></span>
-            <span class="sep">•</span>
-            <span>Best: <b id="bestText">0</b></span>
-          </div>
-        </div>
+<!-- GAME -->
+<section id="game" class="page">
+  <div class="panel single">
+    <h2>Mini Game</h2>
+    <p>click / tap anywhere to jump</p>
 
-        <p class="tiny">If you lose, press Start again.</p>
-      </div>
-    </section>
+    <canvas id="game" width="800" height="240"></canvas>
 
-  </main>
+    <button id="startGame">Start</button>
+    <p class="tiny">try not to hit the clouds</p>
+  </div>
+</section>
 
-  <footer class="footer">
-    <span>this took way too long</span>
-  </footer>
+</main>
+
+<footer class="footer">
+  <span>this took way too long</span>
+</footer>
+
 </div>
 
-<!-- CLICK EFFECT LAYER -->
-<div id="fx" aria-hidden="true"></div>
+<div id="fx"></div>
 
 <script>
-  // ===== ENTRY + NAV =====
-  const entry = document.getElementById("entry");
-  const site = document.getElementById("site");
-  const nameInput = document.getElementById("nameInput");
-  const enterBtn = document.getElementById("enterBtn");
-  const errorMsg = document.getElementById("errorMsg");
+/* ENTRY + NAV */
+const entry = document.getElementById("entry");
+const site = document.getElementById("site");
+const nameInput = document.getElementById("nameInput");
 
-  const titleText = document.getElementById("titleText");
-  const homeHeading = document.getElementById("homeHeading");
-  const captionName = document.getElementById("captionName");
-  const cardToLine = document.getElementById("cardToLine");
+document.getElementById("enterBtn").onclick = () => {
+  if (!nameInput.value.trim()) return;
+  entry.classList.add("hidden");
+  site.classList.remove("hidden");
+};
 
-  let currentPage = "home";
-
-  function enterSite() {
-    const name = (nameInput.value || "").trim();
-    if (!name) {
-      errorMsg.classList.remove("hidden");
-      return;
-    }
-    errorMsg.classList.add("hidden");
-
-    titleText.textContent = "happy birthday " + name.toLowerCase();
-    homeHeading.textContent = "you’re 15, " + name + "!!";
-    captionName.textContent = name;
-    cardToLine.textContent = "To: " + name;
-
-    entry.classList.add("hidden");
-    site.classList.remove("hidden");
-    currentPage = "home";
-  }
-
-  enterBtn.addEventListener("click", enterSite);
-  nameInput.addEventListener("keydown", (e) => {
-    if (e.key === "Enter") enterSite();
-  });
-
-  const tabs = document.querySelectorAll(".tab[data-page]");
-  const pages = document.querySelectorAll(".page");
-
-  tabs.forEach(tab => {
-    tab.addEventListener("click", () => {
-      tabs.forEach(t => t.classList.remove("active"));
-      pages.forEach(p => p.classList.remove("show"));
-
-      tab.classList.add("active");
-      const target = document.getElementById(tab.dataset.page);
-      if (target) target.classList.add("show");
-
-      currentPage = tab.dataset.page;
-      if (currentPage === "game") drawGame(); // show something immediately
-    });
-  });
-
-  // ===== CLICK EFFECT (appears where you click) =====
-  const fx = document.getElementById("fx");
-
-  document.addEventListener("pointerdown", (e) => {
-    // don’t trigger if clicking controls
-    const tag = e.target.tagName;
-    if (["BUTTON","INPUT","TEXTAREA"].includes(tag)) return;
-
-    // Jump in game when running (and also show effect)
-    if (currentPage === "game") jumpGame();
-
-    // Emojis: snoopy-coded on home/game, hearts on card
-    const symbols = (currentPage === "card")
-      ? ["♡", "♥"]
-      : ["🐾", "☁︎", "✦"];
-
-    const s = document.createElement("div");
-    s.className = "sprite";
-    s.textContent = symbols[Math.floor(Math.random() * symbols.length)];
-
-    s.style.left = e.clientX + "px";
-    s.style.top = e.clientY + "px";
-
-    const size = 14 + Math.random() * 12;
-    s.style.fontSize = size + "px";
-
-    const r1 = (Math.random() * 90 - 45);
-    const r2 = r1 + (Math.random() * 140 - 70);
-
-    s.style.transform = `translate(-50%, -50%) rotate(${r1}deg)`;
-    s.style.opacity = "0.95";
-
-    fx.appendChild(s);
-
-    requestAnimationFrame(() => {
-      s.style.opacity = "0";
-      s.style.transform = `translate(-50%, -50%) translateY(-120px) rotate(${r2}deg)`;
-    });
-
-    setTimeout(() => s.remove(), 1700);
-  });
-
-  // ===== MINI GAME =====
-  const canvas = document.getElementById("gameCanvas");
-  const ctx = canvas.getContext("2d");
-
-  const scoreText = document.getElementById("scoreText");
-  const bestText = document.getElementById("bestText");
-  const gameStart = document.getElementById("gameStart");
-  const gameReset = document.getElementById("gameReset");
-
-  let running = false;
-  let gameOver = false;
-  let lastTime = 0;
-
-  let score = 0;
-  let best = Number(localStorage.getItem("alyssaGameBest") || "0");
-  bestText.textContent = best;
-
-  const world = {
-    groundY: 205,
-    speed: 340,
-    gravity: 1900,
-    jumpV: 720
+document.querySelectorAll(".tab").forEach(btn => {
+  btn.onclick = () => {
+    document.querySelectorAll(".tab").forEach(b => b.classList.remove("active"));
+    document.querySelectorAll(".page").forEach(p => p.classList.remove("show"));
+    btn.classList.add("active");
+    document.getElementById(btn.dataset.page).classList.add("show");
   };
+});
 
-  const player = { x: 120, y: world.groundY, vy: 0, r: 18, onGround: true };
-  let obstacles = [];
-  let spawnTimer = 0;
+/* CLICK EFFECT */
+document.addEventListener("click", e => {
+  if (["BUTTON","INPUT","CANVAS"].includes(e.target.tagName)) return;
+  const h = document.createElement("div");
+  h.className = "heart";
+  h.textContent = Math.random() < 0.5 ? "🐾" : "☁︎";
+  h.style.left = e.clientX + "px";
+  h.style.top = e.clientY + "px";
+  document.getElementById("fx").appendChild(h);
+  setTimeout(() => h.remove(), 1400);
+});
 
-  function resetGame() {
-    running = false;
-    gameOver = false;
-    score = 0;
-    scoreText.textContent = "0";
-    player.y = world.groundY;
-    player.vy = 0;
-    player.onGround = true;
-    obstacles = [];
-    spawnTimer = 0;
-    drawGame();
-  }
+/* MINI GAME */
+const canvas = document.getElementById("game");
+const ctx = canvas.getContext("2d");
 
-  function startGame() {
-    resetGame();
-    running = true;
-    gameOver = false;
-    lastTime = performance.now();
-    requestAnimationFrame(loop);
-  }
+let y = 170, vy = 0, obs = 800, running = false;
 
-  function jumpGame() {
-    if (!running) return;
-    if (player.onGround) {
-      player.vy = -world.jumpV;
-      player.onGround = false;
-    }
-  }
+document.getElementById("startGame").onclick = () => {
+  y = 170; vy = 0; obs = 800; running = true;
+  loop();
+};
 
-  function spawnObstacle() {
-    const size = 18 + Math.random() * 10;
-    obstacles.push({
-      x: canvas.width + 40,
-      y: world.groundY,
-      w: size * 1.1,
-      h: size,
-      kind: Math.random() < 0.5 ? "☁︎" : "🐾"
-    });
-  }
+document.addEventListener("pointerdown", () => {
+  if (y >= 170) vy = -22;
+});
 
-  function collideCircleRect(c, r) {
-    const cx = c.x, cy = c.y, rad = c.r;
-    const rx = r.x, ry = r.y - r.h, rw = r.w, rh = r.h;
+function loop(){
+  if (!running) return;
 
-    const closestX = Math.max(rx, Math.min(cx, rx + rw));
-    const closestY = Math.max(ry, Math.min(cy, ry + rh));
-    const dx = cx - closestX;
-    const dy = cy - closestY;
-    return (dx*dx + dy*dy) <= rad*rad;
-  }
+  ctx.clearRect(0,0,800,240);
 
-  function update(dt) {
-    if (gameOver) return;
+  // gravity
+  vy += 1.2;
+  y += vy;
+  if (y > 170) { y = 170; vy = 0; }
 
-    world.speed += dt * 6;
+  // obstacle
+  obs -= 6;
+  if (obs < -30) obs = 800;
 
-    player.vy += world.gravity * dt;
-    player.y += player.vy * dt;
+  // draw player + obstacle
+  ctx.font = "28px system-ui";
+  ctx.fillText("🐶", 80, y);
+  ctx.fillText("☁︎", obs, 190);
 
-    if (player.y >= world.groundY) {
-      player.y = world.groundY;
-      player.vy = 0;
-      player.onGround = true;
-    }
+  // collision
+  if (obs < 100 && obs > 50 && y > 150) running = false;
 
-    spawnTimer -= dt;
-    if (spawnTimer <= 0) {
-      spawnObstacle();
-      spawnTimer = 0.95 + Math.random() * 0.75;
-    }
-
-    for (const ob of obstacles) ob.x -= world.speed * dt;
-    obstacles = obstacles.filter(ob => ob.x + ob.w > -60);
-
-    for (const ob of obstacles) {
-      if (collideCircleRect(player, ob)) {
-        gameOver = true;
-        running = false;
-
-        if (score > best) {
-          best = score;
-          localStorage.setItem("alyssaGameBest", String(best));
-          bestText.textContent = String(best);
-        }
-      }
-    }
-
-    score += Math.floor(dt * 100);
-    scoreText.textContent = String(score);
-  }
-
-  function drawGame() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    // soft blue background
-    ctx.fillStyle = "rgba(214,232,255,0.55)";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-    // ground
-    ctx.fillStyle = "rgba(20,20,20,0.15)";
-    ctx.fillRect(0, world.groundY + 18, canvas.width, 3);
-
-    // player
-    ctx.font = "28px system-ui";
-    ctx.textAlign = "center";
-    ctx.textBaseline = "middle";
-    ctx.fillText("🐶", player.x, player.y - 14);
-
-    // obstacles
-    ctx.font = "26px system-ui";
-    for (const ob of obstacles) {
-      ctx.fillText(ob.kind, ob.x + ob.w/2, ob.y - ob.h/2);
-    }
-
-    // overlay
-    ctx.textAlign = "left";
-    ctx.textBaseline = "top";
-    ctx.fillStyle = "rgba(20,20,20,0.7)";
-    ctx.font = "14px system-ui";
-
-    if (!running && !gameOver) ctx.fillText("Press Start, then click/tap to jump.", 16, 14);
-    if (gameOver) {
-      ctx.fillStyle = "rgba(20,20,20,0.85)";
-      ctx.font = "18px system-ui";
-      ctx.fillText("Game over — press Start to try again.", 16, 14);
-    }
-  }
-
-  function loop(t) {
-    if (!running) return;
-    const dt = Math.min(0.033, (t - lastTime) / 1000);
-    lastTime = t;
-
-    update(dt);
-    drawGame();
-
-    requestAnimationFrame(loop);
-  }
-
-  gameStart.addEventListener("click", startGame);
-  gameReset.addEventListener("click", resetGame);
-
-  resetGame();
+  requestAnimationFrame(loop);
+}
 </script>
 
 </body>
